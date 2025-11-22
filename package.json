@@ -1,0 +1,20 @@
+{
+  "name": "library-api",
+  "version": "1.0.0",
+  "description": "An API which provides book titles, authors and publication dates",
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "Büşra Kaya",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}

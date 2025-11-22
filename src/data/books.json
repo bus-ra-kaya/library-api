@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Harry Potter and the Philosopher's Stone",
+    "author": "J.K. Rowling",
+    "year": 1997,
+    "fiction": true,
+    "genre": "Fantasy",
+    "subGenre": "Young Adult / Magical Adventure"
+  },
+  {
+    "id": 2,
+    "title": "The Hunger Games",
+    "author": "Suzanne Collins",
+    "year": 2008,
+    "fiction": true,
+    "genre": "Dystopian",
+    "subGenre": "Young Adult / Survival"
+  },
+  {
+    "id": 3,
+    "title": "1984",
+    "author": "George Orwell",
+    "year": 1949,
+    "fiction": true,
+    "genre": "Dystopian",
+    "subGenre": "Political / Totalitarianism"
+  },
+  {
+    "id": 4,
+    "title": "Man's Search for Meaning",
+    "author": "Viktor E. Frankl",
+    "year": 1946,
+    "fiction": false,
+    "genre": "Psychology",
+    "subGenre": "Holocaust Memoir / Existentialism"
+  },
+  {
+    "id": 5,
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "year": 1813,
+    "fiction": true,
+    "genre": "Classic Literature",
+    "subGenre": "Romance / Social Commentary"
+  },
+  {
+    "id": 6,
+    "title": "Thinking, Fast and Slow",
+    "author": "Daniel Kahneman",
+    "year": 2011,
+    "fiction": false,
+    "genre": "Psychology",
+    "subGenre": "Cognitive Science / Behavioral Economics"
+  },
+  {
+    "id": 7,
+    "title": "Frankenstein",
+    "author": "Mary Shelley",
+    "year": 1818,
+    "fiction": true,
+    "genre": "Gothic",
+    "subGenre": "Horror / Early Science Fiction"
+  },
+  {
+    "id": 8,
+    "title": "Norwegian Wood",
+    "author": "Haruki Murakami",
+    "year": 1987,
+    "fiction": true,
+    "genre": "Literary Fiction",
+    "subGenre": "Psychological / Romance"
+  },
+  {
+    "id": 9,
+    "title": "A Wild Sheep Chase",
+    "author": "Haruki Murakami",
+    "year": 1982,
+    "fiction": true,
+    "genre": "Magical Realism",
+    "subGenre": "Surreal Mystery"
+  },
+  {
+    "id": 10,
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "year": 2018,
+    "fiction": false,
+    "genre": "Self-Help",
+    "subGenre": "Productivity / Behavior Change"
+  }
+]
