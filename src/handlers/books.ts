@@ -1,6 +1,11 @@
 import books from '../data/books.json' with {type : "json"};
 import { IncomingMessage, ServerResponse } from 'node:http';
 
+type searchParams = {
+  author?: string | null,
+  title?: string | null
+}
+
 export function getBooks(req: IncomingMessage, res: ServerResponse){
   res.statusCode = 200;
   res.setHeader('Content-Type','application/json');
@@ -22,22 +27,28 @@ export function getBooksById(req: IncomingMessage, res: ServerResponse, bookId: 
   }
 }
 
-export function getBooksByAuthor(req: IncomingMessage, res: ServerResponse, name: string) {
+export function searchBooks(req: IncomingMessage, res: ServerResponse, { author, title}: searchParams) {
 
-  const normalizedName = name.toLowerCase().replaceAll('-', ' ');
+  const a = author?.toLowerCase().replaceAll('-', ' ');
+  const t = title?.toLowerCase().replaceAll('-',' ');
 
-  const booksByAuthor = books.filter((book) => {
-    return book.author.toLowerCase() === normalizedName;
-  })
-  if (booksByAuthor.length > 0) {
+  const results = books.filter((book) => {
+    if (a && !book.author.toLowerCase().includes(a)) return false;
+    if (t && !book.title.toLowerCase().includes(t)) return false;
+    return true;
+  });
+
+  const matchFound = results.length > 0;
+  
+  res.setHeader("Content-Type", "application/json");
+
+  if (matchFound){
     res.statusCode = 200;
-    res.setHeader('Content-Type','application/json');
-    res.end(JSON.stringify(booksByAuthor));
+    res.end(JSON.stringify(results));
   }
   else {
-  res.statusCode = 404;
-  res.setHeader('Content-Type','application/json');
-  res.end(JSON.stringify({ error: 'Author not found'}));
+    res.statusCode = 404;
+    res.end(JSON.stringify({error: "Match not found"}));
   }
-
+  
 }

@@ -1,92 +1,222 @@
 [
   {
     "id": 1,
-    "title": "Harry Potter and the Philosopher's Stone",
-    "author": "J.K. Rowling",
-    "year": 1997,
-    "fiction": true,
-    "genre": "Fantasy",
-    "subGenre": "Young Adult / Magical Adventure"
-  },
-  {
-    "id": 2,
-    "title": "The Hunger Games",
-    "author": "Suzanne Collins",
-    "year": 2008,
-    "fiction": true,
-    "genre": "Dystopian",
-    "subGenre": "Young Adult / Survival"
-  },
-  {
-    "id": 3,
     "title": "1984",
     "author": "George Orwell",
     "year": 1949,
     "fiction": true,
-    "genre": "Dystopian",
-    "subGenre": "Political / Totalitarianism"
+    "genre": ["Dystopian"],
+    "pages": 328,
+    "isbn": "9780451524935"
+  },
+  {
+    "id": 2,
+    "title": "A Psalm for the Wild-Built",
+    "author": "Becky Chambers",
+    "year": 2021,
+    "fiction": true,
+    "genre": ["Science Fiction"],
+    "pages": 160,
+    "isbn": "9781250236210"
+  },
+  {
+    "id": 3,
+    "title": "A Short Introduction to Philosophy",
+    "author": "Robert C. Solomon",
+    "year": 2007,
+    "fiction": false,
+    "genre": ["Philosophy"],
+    "pages": 352,
+    "isbn": "9780195174373"
   },
   {
     "id": 4,
-    "title": "Man's Search for Meaning",
-    "author": "Viktor E. Frankl",
-    "year": 1946,
-    "fiction": false,
-    "genre": "Psychology",
-    "subGenre": "Holocaust Memoir / Existentialism"
+    "title": "A Tale of Two Cities",
+    "author": "Charles Dickens",
+    "year": 1859,
+    "fiction": true,
+    "genre": ["Classic Literature"],
+    "pages": 544,
+    "isbn": "9780141439600"
   },
   {
     "id": 5,
-    "title": "Pride and Prejudice",
-    "author": "Jane Austen",
-    "year": 1813,
-    "fiction": true,
-    "genre": "Classic Literature",
-    "subGenre": "Romance / Social Commentary"
-  },
-  {
-    "id": 6,
-    "title": "Thinking, Fast and Slow",
-    "author": "Daniel Kahneman",
-    "year": 2011,
-    "fiction": false,
-    "genre": "Psychology",
-    "subGenre": "Cognitive Science / Behavioral Economics"
-  },
-  {
-    "id": 7,
-    "title": "Frankenstein",
-    "author": "Mary Shelley",
-    "year": 1818,
-    "fiction": true,
-    "genre": "Gothic",
-    "subGenre": "Horror / Early Science Fiction"
-  },
-  {
-    "id": 8,
-    "title": "Norwegian Wood",
-    "author": "Haruki Murakami",
-    "year": 1987,
-    "fiction": true,
-    "genre": "Literary Fiction",
-    "subGenre": "Psychological / Romance"
-  },
-  {
-    "id": 9,
     "title": "A Wild Sheep Chase",
     "author": "Haruki Murakami",
     "year": 1982,
     "fiction": true,
-    "genre": "Magical Realism",
-    "subGenre": "Surreal Mystery"
+    "genre": ["Magical Realism"],
+    "pages": 353,
+    "isbn": "9780375718946"
   },
   {
-    "id": 10,
+    "id": 6,
     "title": "Atomic Habits",
     "author": "James Clear",
     "year": 2018,
     "fiction": false,
-    "genre": "Self-Help",
-    "subGenre": "Productivity / Behavior Change"
+    "genre": ["Self-Help"],
+    "pages": 320,
+    "isbn": "9780735211292"
+  },
+  {
+    "id": 7,
+    "title": "Circe",
+    "author": "Madeline Miller",
+    "year": 2018,
+    "fiction": true,
+    "genre": ["Mythology", "Fantasy"],
+    "pages": 400,
+    "isbn": "9780316556347"
+  },
+  {
+    "id": 8,
+    "title": "Convenience Store Woman",
+    "author": "Sayaka Murata",
+    "year": 2016,
+    "fiction": true,
+    "genre": ["Contemporary Fiction"],
+    "pages": 176,
+    "isbn": "9780802128256"
+  },
+  {
+    "id": 9,
+    "title": "Frankenstein",
+    "author": "Mary Shelley",
+    "year": 1818,
+    "fiction": true,
+    "genre": ["Gothic"],
+    "pages": 280,
+    "isbn": "9780486282114"
+  },
+  {
+    "id": 10,
+    "title": "Harry Potter and the Philosopher's Stone",
+    "author": "J.K. Rowling",
+    "year": 1997,
+    "fiction": true,
+    "genre": ["Fantasy"],
+    "pages": 223,
+    "isbn": "9780747532699"
+  },
+  {
+    "id": 11,
+    "title": "Man's Search for Meaning",
+    "author": "Viktor E. Frankl",
+    "year": 1946,
+    "fiction": false,
+    "genre": ["Psychology"],
+    "pages": 165,
+    "isbn": "9780807014271"
+  },
+  {
+    "id": 12,
+    "title": "Norwegian Wood",
+    "author": "Haruki Murakami",
+    "year": 1987,
+    "fiction": true,
+    "genre": ["Literary Fiction"],
+    "pages": 296,
+    "isbn": "9780375704024"
+  },
+  {
+    "id": 13,
+    "title": "Outliers",
+    "author": "Malcolm Gladwell",
+    "year": 2008,
+    "fiction": false,
+    "genre": ["Psychology", "Sociology"],
+    "pages": 336,
+    "isbn": "9780316017930"
+  },
+  {
+    "id": 14,
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "year": 1813,
+    "fiction": true,
+    "genre": ["Classic Literature"],
+    "pages": 279,
+    "isbn": "9781503290563"
+  },
+  {
+    "id": 15,
+    "title": "Song of Achilles",
+    "author": "Madeline Miller",
+    "year": 2011,
+    "fiction": true,
+    "genre": ["Mythology", "Historical Fiction"],
+    "pages": 416,
+    "isbn": "9780062060624"
+  },
+  {
+    "id": 16,
+    "title": "The Bell Jar",
+    "author": "Sylvia Plath",
+    "year": 1963,
+    "fiction": true,
+    "genre": ["Classic Literature"],
+    "pages": 264,
+    "isbn": "9780060837020"
+  },
+  {
+    "id": 17,
+    "title": "The Big Questions",
+    "author": "Simon Blackburn",
+    "year": 2009,
+    "fiction": false,
+    "genre": ["Philosophy"],
+    "pages": 320,
+    "isbn": "9780195311143"
+  },
+  {
+    "id": 18,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "year": 1925,
+    "fiction": true,
+    "genre": ["Classic Literature"],
+    "pages": 180,
+    "isbn": "9780743273565"
+  },
+  {
+    "id": 19,
+    "title": "Thinking, Fast and Slow",
+    "author": "Daniel Kahneman",
+    "year": 2011,
+    "fiction": false,
+    "genre": ["Psychology"],
+    "pages": 499,
+    "isbn": "9780374533557"
+  },
+  {
+    "id": 20,
+    "title": "The Hunger Games",
+    "author": "Suzanne Collins",
+    "year": 2008,
+    "fiction": true,
+    "genre": ["Dystopian"],
+    "pages": 374,
+    "isbn": "9780439023481"
+  },
+  {
+    "id": 21,
+    "title": "Veronika Decides to Die",
+    "author": "Paulo Coelho",
+    "year": 1998,
+    "fiction": true,
+    "genre": ["Psychological Fiction"],
+    "pages": 208,
+    "isbn": "9780061124266"
+  },
+  {
+    "id": 22,
+    "title": "Your Inner Fish",
+    "author": "Neil Shubin",
+    "year": 2008,
+    "fiction": false,
+    "genre": ["Science"],
+    "pages": 256,
+    "isbn": "9780307277459"
   }
 ]

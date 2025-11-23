@@ -1,30 +1,34 @@
 import http from "node:http";
-import { getBooks, getBooksById, getBooksByAuthor } from "./handlers/books.js";
+import { getBooks, getBooksById, searchBooks } from "./handlers/books.js";
 
 const PORT = process.env.PORT || 8000;
 
 const server = http.createServer((req,res) => {
 
+  const url = new URL(req.url!, `http://${req.headers.host}`);
   const byIdMatch = req.url?.match(/^\/api\/books\/(\d+)$/);
-	const authorMatch = req.url?.match(/^\/api\/authors\/([^/]+)+$/);
+  console.log('req.url:', req.url);
+  console.log('url.pathname:', url.pathname);
+  console.log('author param:', url.searchParams.get('author'));
 
   if(req.method !== "GET"){
     res.statusCode = 405;
-    res.end(JSON.stringify({error: "GET is the only supported method for this route"}));
+    return res.end(JSON.stringify({error: "GET is the only supported method for this route"}));
   }
-  else if(req.url === '/api/books'){
-    getBooks(req, res);
+  else if(url.pathname === '/api/books'){
+    const author = url.searchParams.get('author');
+    const title = url.searchParams.get('title');
+    if(author || title){
+      searchBooks(req, res, { author, title });
+    }
+    else {
+      getBooks(req, res);
+    }
   }
   else if(byIdMatch?.[1]){
 		const bookId = byIdMatch[1];
     getBooksById(req, res, bookId);
   }
-	else if(authorMatch?.[1]){
-		const encodedName = authorMatch[1];
-		const name = decodeURIComponent(encodedName);
-		getBooksByAuthor(req, res, name);
-
-	}
   else {
     res.statusCode = 404;
     res.setHeader('Content-Type','application/json');
