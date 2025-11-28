@@ -1,6 +1,29 @@
-# Library API (WIP)
+# Library API
 
 A Typescript + Node API that serves book data(titles, authors, genres, years)
+
+### Installation
+
+1. Clone the repository
+```
+git clone https://github.com/bus-ra-kaya/library-api
+```
+
+2. Install dependencies
+```
+npm install
+```
+
+3. Create a `.env` file (optional)
+```
+PORT=8000
+```
+
+4. Run the server
+```
+npm run dev     # Development mode
+npm start       # Production mod
+```
 
 ## Books Endpoints
 
@@ -21,8 +44,8 @@ A Typescript + Node API that serves book data(titles, authors, genres, years)
 | `year_max` | integer | Maximum publication year |
 
 ### Sorting
-| Parameter | Type | Description | Status |
-|-----------|------|-------------|--------|
+| Parameter | Type | Description | 
+|-----------|------|-------------|
 | `sort_by` | string | Field to sort by (`title`, `author`, `year`, `pages`) |
 | `order` | string | Sort order: `asc` or `desc` (default: `asc`) |
 
@@ -31,3 +54,7 @@ A Typescript + Node API that serves book data(titles, authors, genres, years)
 GET /api/books?author=Murakami&sort_by=year&order=desc
 GET /api/books?fiction=true&year_min=2000&year_max=2020
 ```
+
+# License 
+
+MIT

@@ -1,12 +1,16 @@
 import http from "node:http";
 import { getBooks, getBooksById, getRandomBook, searchBooks } from "./handlers/books.js";
+import { requestLogger, cors, runMiddleware } from "./middleware/common.js";
 import sendJson from "./utils/sendJson.js";
 
 const PORT = process.env.PORT || 8000;
 
 const server = http.createServer((req,res) => {
+  const middlewares = [cors, requestLogger];
 
-  const url = new URL(req.url!, `http://${req.headers.host}`);
+  runMiddleware(middlewares, req, res, () => {
+
+    const url = new URL(req.url!, `http://${req.headers.host}`);
   const byIdMatch = req.url?.match(/^\/api\/books\/(\d+)$/);
 
   if(req.method !== "GET"){
@@ -43,6 +47,9 @@ const server = http.createServer((req,res) => {
   else {
     sendJson(res, 404, {error: 'Endpoint not found'});
   }
+
+  })
+  
 });
 
 server.listen(PORT, () => {

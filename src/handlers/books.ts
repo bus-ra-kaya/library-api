@@ -82,6 +82,9 @@ export function searchBooks(req: IncomingMessage, res: ServerResponse, params: s
       if (validKeys.includes(sortBy as validKeys)){
       results = sortBooks(results, sortBy as validKeys, order);
       }
+      else {
+      return sendJson(res, 404, {error: "Sorting key not found"})
+      }
   }
 
     sendJson(res, 200, results);
